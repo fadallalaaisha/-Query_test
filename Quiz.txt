@@ -1,0 +1,31 @@
+Write a query to obtain all the records from the above table
+@Query("SELECT * FROM student")
+  
+Write a query to obtain the names and marks of all the students
+@Query("SELECT * FROM student WHERE = :marks,names")
+
+Write a query to return all the unique towns from the table
+@Query("SELECT * FROM town WHERE unique=['Ruiru','Lodwar','Mombasa']")
+ SELECT DISTINCT town FROM students;
+
+Write a query to obtain all the names of the students from ruiru
+@Query("SELECT name FROM student WHERE town = :'Ruiru'")
+    
+Write a query to obtain all records of the students who scored over 85 marks
+SELECT name FROM students WHERE marks= 'marks=>85');
+
+Write a query to return all the students who scored over 80 marks from
+Lodwar
+SELECT name FROM students WHERE town='Lodwar' AND (marks=>85);
+
+Write a query to obtain the names of the students who scored above 70 marks
+outside Nairobi
+@Query("SELECT name FROM student WHERE marks=>70")
+
+Write a query to obtain all the students records in alphabetical order of their
+names
+@Query("SELECT student_name FROM student WHERE name = :'A,Z'")
+
+
+Write a query to obtain the names of the students who either reside in Nairobi
+ior scored above 80 marks
